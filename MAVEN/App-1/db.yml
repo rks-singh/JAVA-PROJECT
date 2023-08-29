@@ -1,2 +1,3 @@
 username = ravidb
 password = ravi@123
+driver = OracleDriver
