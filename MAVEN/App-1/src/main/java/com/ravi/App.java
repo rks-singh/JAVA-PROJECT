@@ -17,6 +17,10 @@ public class App
 	int y =30;
 	int z = x+y;
 	System.out.println("Sum ::"+z);
+<<<<<<< HEAD
 
+=======
+	System.out.println("Hello my name is Ravi Shekhar Singh");
+>>>>>>> c5c3eb3439d9fdad2b14e5cefd4c5cf22040dc62
     }
 }
