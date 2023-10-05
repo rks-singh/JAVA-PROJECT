@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sign Up </title>
+
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script th:src="@{/js/App.js}"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+
+<body>
+	<div class="container" style="width:50%; height: 50%;">
+		<div class="card d-flex mx-auto mt-3">
+			<div class="card">
+				<h4 class="text-info p-2" style="text-align: center;">Registration Form</h4>
+				<form th:action="@{/submit}" th:object="${signUp}" method="post" class="mx-auto p-3">
+					<table>
+						<tr>
+							<th class="text-success">First Name :</th>
+							<td class=""><input type="text" th:field="*{firstName}" required></td>
+						</tr>
+						<tr>
+							<th class="text-success">Last Name :</th>
+							<td class=""><input type="text" required th:field="*{lastName}"></td>
+						</tr>
+						<tr>
+							<th class="text-success" id="email">Email :</th>
+							<td class="">
+								<input type="text" required th:field="*{email}">
+								<span id="emailMsg" class="text-dnager text-center"></span>
+							</td>
+						</tr>
+						<tr>
+							<th class="text-success">Phone :</th>
+							<td class=""><input type="text" required th:field="*{phone}"></td>
+						</tr>
+						<tr>
+							<th class="text-success">DOB :</th>
+							<td class=""><input type="date" required th:field="*{dob}"></td>
+						</tr>
+						<tr>
+							<th class="text-success">Gender :</th>
+							<td class="">
+								<input type="radio" name="Gender" value="Male" required th:field="*{gender}">Male
+								<input type="radio" name="Gender" value="Female" required th:field="*{gender}">Female
+							</td>
+						</tr>
+						<tr>
+							<th class="text-success">Country :</th>
+							<td class="">
+								<select id="countries" th:field="*{country}">
+									<option value='-1'>-SELECT-</option>
+									<option th:each="country:${country}" th:value="${country[0]}"
+										th:text="${country[1]}" />
+									</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th class="text-success">State :</th>
+							<td class="" required th:field="*{state}">
+								<select id="states">
+									<option value='-1'>-SELECT-</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th class="text-success">City :</th>
+							<td class="" required th:field="*{city}">
+								<select id="cities" >
+									<option value='-1'>-SELECT-</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th></th>
+							<td>
+								<button id="button" type="submit" class="mt-2 btn btn-sm btn-success">Register</button>
+								<button type="reset" class="mt-2 btn btn-sm btn-primary">Reset</button>
+							</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>

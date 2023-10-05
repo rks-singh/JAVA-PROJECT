@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="F:\JRTP-PRACTICE\WORKSPACE"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -48,6 +49,7 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="Maven-App-03"/>
 			<item value="Maven_App_01"/>
 			<item value="02-Maven-App"/>
 			<item value="01-Maven-App"/>

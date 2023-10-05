@@ -1,0 +1,10 @@
+2023-10-04 00:38:44,389 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils       - Could not detect default configuration classes for test class [com.ravi.ApplicationTests]: ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-10-04 00:38:44,507 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper        - Found @SpringBootConfiguration com.ravi.Application for test class com.ravi.ApplicationTests
+2023-10-04 00:38:45,226 [main] INFO  com.ravi.ApplicationTests                          - Starting ApplicationTests using Java 17.0.7 with PID 8224 (started by Hp in F:\JRTP-PRACTICE\02-LOGGING-APP-1)
+2023-10-04 00:38:45,227 [main] INFO  com.ravi.ApplicationTests                          - No active profile set, falling back to 1 default profile: "default"
+2023-10-04 00:38:46,881 [main] INFO  com.ravi.ApplicationTests                          - Started ApplicationTests in 2.045 seconds (process running for 5.901)
+2023-10-04 00:40:56,449 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils       - Could not detect default configuration classes for test class [com.ravi.ApplicationTests]: ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-10-04 00:40:56,559 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper        - Found @SpringBootConfiguration com.ravi.Application for test class com.ravi.ApplicationTests
+2023-10-04 00:40:57,050 [main] INFO  com.ravi.ApplicationTests                          - Starting ApplicationTests using Java 17.0.7 with PID 6260 (started by Hp in F:\JRTP-PRACTICE\02-LOGGING-APP-1)
+2023-10-04 00:40:57,052 [main] INFO  com.ravi.ApplicationTests                          - No active profile set, falling back to 1 default profile: "default"
+2023-10-04 00:40:59,008 [main] INFO  com.ravi.ApplicationTests                          - Started ApplicationTests in 2.244 seconds (process running for 3.624)

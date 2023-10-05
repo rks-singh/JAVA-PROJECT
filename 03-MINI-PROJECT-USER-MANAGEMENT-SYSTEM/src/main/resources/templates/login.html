@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Login</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+
+<body>
+	<div class="container" style="width:50%; height: 50%;">
+		<div class="card d-flex mx-auto mt-3">
+			<div class="card">
+				<h4 class="text-info p-2" style="text-align: center;">Sign In Here</h4>
+				<form class="mx-auto p-3">
+					<table>
+						<tr>
+							<th class="text-success">Email :</th>
+							<td class=""><input type="text"></td>
+						</tr>
+						<tr>
+							<th class="text-success">Password :</th>
+							<td class="ml-2"><input type="text"></td>
+						</tr>
+						<tr>
+							<th></th>
+							<td><button type="submit" class="mt-2 btn btn-sm btn-primary">Sign-In</button></td>
+						</tr>
+						<tr>
+							<td>
+								<a href="#" class="d-block mt-4">Forgot Pwd?</a>
+							</td>
+							<td style="text-align: right;">
+								<a th:href="@{/signup}" class="d-block mt-4">Sign-Up</a>
+							</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>

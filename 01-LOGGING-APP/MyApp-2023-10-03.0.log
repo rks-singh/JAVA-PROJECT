@@ -1,0 +1,219 @@
+2023-10-03 23:27:48,176 [restartedMain] INFO  com.ravi.Application                               - Starting Application using Java 17.0.7 with PID 11428 (F:\JRTP-PRACTICE\01-LOGGING-APP\target\classes started by Hp in F:\JRTP-PRACTICE\01-LOGGING-APP)
+2023-10-03 23:27:48,181 [restartedMain] INFO  com.ravi.Application                               - No active profile set, falling back to 1 default profile: "default"
+2023-10-03 23:27:48,241 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor    - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-03 23:27:48,241 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor    - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-10-03 23:27:49,453 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer            - Tomcat initialized with port(s): 8080 (http)
+2023-10-03 23:27:49,462 [restartedMain] INFO  o.apache.coyote.http11.Http11NioProtocol           - Initializing ProtocolHandler ["http-nio-8080"]
+2023-10-03 23:27:49,464 [restartedMain] INFO  o.apache.catalina.core.StandardService             - Starting service [Tomcat]
+2023-10-03 23:27:49,464 [restartedMain] INFO  org.apache.catalina.core.StandardEngine            - Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-10-03 23:27:49,528 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]                 - Initializing Spring embedded WebApplicationContext
+2023-10-03 23:27:49,529 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext     - Root WebApplicationContext: initialization completed in 1285 ms
+2023-10-03 23:27:49,844 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer                 - LiveReload server is running on port 35729
+2023-10-03 23:27:49,856 [restartedMain] INFO  o.apache.coyote.http11.Http11NioProtocol           - Starting ProtocolHandler ["http-nio-8080"]
+2023-10-03 23:27:49,879 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer            - Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-03 23:27:49,888 [restartedMain] INFO  com.ravi.Application                               - Started Application in 2.024 seconds (process running for 4.241)
+2023-10-03 23:28:17,445 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]                 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-03 23:28:17,446 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet                  - Initializing Servlet 'dispatcherServlet'
+2023-10-03 23:28:17,452 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet                  - Completed initialization in 4 ms
+2023-10-03 23:28:40,200 [http-nio-8080-exec-5] INFO  com.ravi.controller.MessageCongtroller             - Welcome() method execution start....
+2023-10-03 23:28:40,200 [http-nio-8080-exec-5] INFO  com.ravi.controller.MessageCongtroller             - Welcome() method execution end.....
+2023-10-03 23:29:23,515 [http-nio-8080-exec-7] INFO  com.ravi.controller.MessageCongtroller             - Greet() method execution start....
+2023-10-03 23:29:23,515 [http-nio-8080-exec-7] INFO  com.ravi.controller.MessageCongtroller             - Greet() method execution end.....
+2023-10-03 23:31:59,593 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2023-10-03 23:32:00,216 [Thread-5] INFO  o.apache.coyote.http11.Http11NioProtocol           - Pausing ProtocolHandler ["http-nio-8080"]
+2023-10-03 23:32:00,217 [Thread-5] INFO  o.apache.catalina.core.StandardService             - Stopping service [Tomcat]
+2023-10-03 23:32:00,219 [Thread-5] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]                 - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-10-03 23:32:00,357 [Thread-5] INFO  o.apache.coyote.http11.Http11NioProtocol           - Stopping ProtocolHandler ["http-nio-8080"]
+2023-10-03 23:32:00,362 [Thread-5] INFO  o.apache.coyote.http11.Http11NioProtocol           - Destroying ProtocolHandler ["http-nio-8080"]
+2023-10-03 23:32:00,441 [restartedMain] INFO  com.ravi.Application                               - Starting Application using Java 17.0.7 with PID 11428 (F:\JRTP-PRACTICE\01-LOGGING-APP\target\classes started by Hp in F:\JRTP-PRACTICE\01-LOGGING-APP)
+2023-10-03 23:32:00,441 [restartedMain] INFO  com.ravi.Application                               - No active profile set, falling back to 1 default profile: "default"
+2023-10-03 23:32:00,601 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer            - Tomcat initialized with port(s): 8080 (http)
+2023-10-03 23:32:00,601 [restartedMain] INFO  o.apache.coyote.http11.Http11NioProtocol           - Initializing ProtocolHandler ["http-nio-8080"]
+2023-10-03 23:32:00,601 [restartedMain] INFO  o.apache.catalina.core.StandardService             - Starting service [Tomcat]
+2023-10-03 23:32:00,603 [restartedMain] INFO  org.apache.catalina.core.StandardEngine            - Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-10-03 23:32:00,618 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]                 - Initializing Spring embedded WebApplicationContext
+2023-10-03 23:32:00,618 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext     - Root WebApplicationContext: initialization completed in 174 ms
+2023-10-03 23:32:00,675 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer                 - LiveReload server is running on port 35729
+2023-10-03 23:32:00,681 [restartedMain] INFO  o.apache.coyote.http11.Http11NioProtocol           - Starting ProtocolHandler ["http-nio-8080"]
+2023-10-03 23:32:00,686 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer            - Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-03 23:32:00,691 [restartedMain] INFO  com.ravi.Application                               - Started Application in 0.288 seconds (process running for 255.044)
+2023-10-03 23:32:00,694 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener  - Condition evaluation unchanged
+2023-10-03 23:33:53,557 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-10-03 23:33:53,598 [Thread-7] INFO  o.apache.coyote.http11.Http11NioProtocol           - Pausing ProtocolHandler ["http-nio-8080"]
+2023-10-03 23:33:53,599 [Thread-7] INFO  o.apache.catalina.core.StandardService             - Stopping service [Tomcat]
+2023-10-03 23:33:53,602 [Thread-7] INFO  o.apache.coyote.http11.Http11NioProtocol           - Stopping ProtocolHandler ["http-nio-8080"]
+2023-10-03 23:33:53,604 [Thread-7] INFO  o.apache.coyote.http11.Http11NioProtocol           - Destroying ProtocolHandler ["http-nio-8080"]
+2023-10-03 23:33:53,674 [restartedMain] INFO  com.ravi.Application                               - Starting Application using Java 17.0.7 with PID 11428 (F:\JRTP-PRACTICE\01-LOGGING-APP\target\classes started by Hp in F:\JRTP-PRACTICE\01-LOGGING-APP)
+2023-10-03 23:33:53,675 [restartedMain] INFO  com.ravi.Application                               - No active profile set, falling back to 1 default profile: "default"
+2023-10-03 23:33:53,856 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer            - Tomcat initialized with port(s): 8080 (http)
+2023-10-03 23:33:53,856 [restartedMain] INFO  o.apache.coyote.http11.Http11NioProtocol           - Initializing ProtocolHandler ["http-nio-8080"]
+2023-10-03 23:33:53,857 [restartedMain] INFO  o.apache.catalina.core.StandardService             - Starting service [Tomcat]
+2023-10-03 23:33:53,857 [restartedMain] INFO  org.apache.catalina.core.StandardEngine            - Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-10-03 23:33:53,872 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]                 - Initializing Spring embedded WebApplicationContext
+2023-10-03 23:33:53,872 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext     - Root WebApplicationContext: initialization completed in 195 ms
+2023-10-03 23:33:53,927 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer                 - LiveReload server is running on port 35729
+2023-10-03 23:33:53,932 [restartedMain] INFO  o.apache.coyote.http11.Http11NioProtocol           - Starting ProtocolHandler ["http-nio-8080"]
+2023-10-03 23:33:53,937 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer            - Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-03 23:33:53,940 [restartedMain] INFO  com.ravi.Application                               - Started Application in 0.291 seconds (process running for 368.293)
+2023-10-03 23:33:53,941 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener  - Condition evaluation unchanged
+2023-10-03 23:34:18,531 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-10-03 23:34:18,567 [Thread-11] INFO  o.apache.coyote.http11.Http11NioProtocol           - Pausing ProtocolHandler ["http-nio-8080"]
+2023-10-03 23:34:18,567 [Thread-11] INFO  o.apache.catalina.core.StandardService             - Stopping service [Tomcat]
+2023-10-03 23:34:18,570 [Thread-11] INFO  o.apache.coyote.http11.Http11NioProtocol           - Stopping ProtocolHandler ["http-nio-8080"]
+2023-10-03 23:34:18,572 [Thread-11] INFO  o.apache.coyote.http11.Http11NioProtocol           - Destroying ProtocolHandler ["http-nio-8080"]
+2023-10-03 23:34:18,630 [restartedMain] INFO  com.ravi.Application                               - Starting Application using Java 17.0.7 with PID 11428 (F:\JRTP-PRACTICE\01-LOGGING-APP\target\classes started by Hp in F:\JRTP-PRACTICE\01-LOGGING-APP)
+2023-10-03 23:34:18,630 [restartedMain] INFO  com.ravi.Application                               - No active profile set, falling back to 1 default profile: "default"
+2023-10-03 23:34:18,771 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer            - Tomcat initialized with port(s): 8080 (http)
+2023-10-03 23:34:18,772 [restartedMain] INFO  o.apache.coyote.http11.Http11NioProtocol           - Initializing ProtocolHandler ["http-nio-8080"]
+2023-10-03 23:34:18,772 [restartedMain] INFO  o.apache.catalina.core.StandardService             - Starting service [Tomcat]
+2023-10-03 23:34:18,772 [restartedMain] INFO  org.apache.catalina.core.StandardEngine            - Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-10-03 23:34:18,787 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]                 - Initializing Spring embedded WebApplicationContext
+2023-10-03 23:34:18,787 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext     - Root WebApplicationContext: initialization completed in 154 ms
+2023-10-03 23:34:18,851 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer                 - LiveReload server is running on port 35729
+2023-10-03 23:34:18,857 [restartedMain] INFO  o.apache.coyote.http11.Http11NioProtocol           - Starting ProtocolHandler ["http-nio-8080"]
+2023-10-03 23:34:18,861 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer            - Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-03 23:34:18,865 [restartedMain] INFO  com.ravi.Application                               - Started Application in 0.258 seconds (process running for 393.217)
+2023-10-03 23:34:18,867 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener  - Condition evaluation unchanged
+2023-10-03 23:34:43,521 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]                 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-03 23:34:43,521 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet                  - Initializing Servlet 'dispatcherServlet'
+2023-10-03 23:34:43,521 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet                  - Completed initialization in 0 ms
+2023-10-03 23:34:43,534 [http-nio-8080-exec-1] ERROR o.a.c.c.C.[.[.[/].[dispatcherServlet]              - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "String.length()" because "msg" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "String.length()" because "msg" is null
+	at com.ravi.controller.ProductController.getProduct(ProductController.java:16)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-10-03 23:36:18,983 [http-nio-8080-exec-3] INFO  com.ravi.controller.MessageCongtroller             - Greet() method execution start....
+2023-10-03 23:36:18,983 [http-nio-8080-exec-3] INFO  com.ravi.controller.MessageCongtroller             - Greet() method execution end.....
+2023-10-03 23:36:47,615 [http-nio-8080-exec-7] INFO  com.ravi.controller.MessageCongtroller             - Welcome() method execution start....
+2023-10-03 23:36:47,615 [http-nio-8080-exec-7] INFO  com.ravi.controller.MessageCongtroller             - Welcome() method execution end.....
+2023-10-03 23:46:12,529 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 8 class path changes (0 additions, 5 deletions, 3 modifications)
+2023-10-03 23:46:12,548 [Thread-15] INFO  o.apache.coyote.http11.Http11NioProtocol           - Pausing ProtocolHandler ["http-nio-8080"]
+2023-10-03 23:46:12,548 [Thread-15] INFO  o.apache.catalina.core.StandardService             - Stopping service [Tomcat]
+2023-10-03 23:46:12,549 [Thread-15] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]                 - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-10-03 23:46:12,551 [Thread-15] INFO  o.apache.coyote.http11.Http11NioProtocol           - Stopping ProtocolHandler ["http-nio-8080"]
+2023-10-03 23:46:12,553 [Thread-15] INFO  o.apache.coyote.http11.Http11NioProtocol           - Destroying ProtocolHandler ["http-nio-8080"]
+2023-10-03 23:46:45,085 [restartedMain] INFO  com.ravi.Application                               - Starting Application using Java 17.0.7 with PID 11428 (F:\JRTP-PRACTICE\01-LOGGING-APP\target\classes started by Hp in F:\JRTP-PRACTICE\01-LOGGING-APP)
+2023-10-03 23:46:45,086 [restartedMain] INFO  com.ravi.Application                               - No active profile set, falling back to 1 default profile: "default"
+2023-10-03 23:46:45,457 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer            - Tomcat initialized with port(s): 8080 (http)
+2023-10-03 23:46:45,458 [restartedMain] INFO  o.apache.coyote.http11.Http11NioProtocol           - Initializing ProtocolHandler ["http-nio-8080"]
+2023-10-03 23:46:45,459 [restartedMain] INFO  o.apache.catalina.core.StandardService             - Starting service [Tomcat]
+2023-10-03 23:46:45,460 [restartedMain] INFO  org.apache.catalina.core.StandardEngine            - Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-10-03 23:46:45,495 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]                 - Initializing Spring embedded WebApplicationContext
+2023-10-03 23:46:45,496 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext     - Root WebApplicationContext: initialization completed in 401 ms
+2023-10-03 23:46:45,609 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer                 - LiveReload server is running on port 35729
+2023-10-03 23:46:45,617 [restartedMain] INFO  o.apache.coyote.http11.Http11NioProtocol           - Starting ProtocolHandler ["http-nio-8080"]
+2023-10-03 23:46:45,623 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer            - Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-03 23:46:45,628 [restartedMain] INFO  com.ravi.Application                               - Started Application in 0.604 seconds (process running for 1139.98)
+2023-10-03 23:46:45,630 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener  - Condition evaluation unchanged
+2023-10-03 23:46:52,130 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-10-03 23:46:52,144 [Thread-19] INFO  o.apache.coyote.http11.Http11NioProtocol           - Pausing ProtocolHandler ["http-nio-8080"]
+2023-10-03 23:46:52,144 [Thread-19] INFO  o.apache.catalina.core.StandardService             - Stopping service [Tomcat]
+2023-10-03 23:46:52,146 [Thread-19] INFO  o.apache.coyote.http11.Http11NioProtocol           - Stopping ProtocolHandler ["http-nio-8080"]
+2023-10-03 23:46:52,147 [Thread-19] INFO  o.apache.coyote.http11.Http11NioProtocol           - Destroying ProtocolHandler ["http-nio-8080"]
+2023-10-03 23:46:52,199 [restartedMain] INFO  com.ravi.Application                               - Starting Application using Java 17.0.7 with PID 11428 (F:\JRTP-PRACTICE\01-LOGGING-APP\target\classes started by Hp in F:\JRTP-PRACTICE\01-LOGGING-APP)
+2023-10-03 23:46:52,200 [restartedMain] INFO  com.ravi.Application                               - No active profile set, falling back to 1 default profile: "default"
+2023-10-03 23:46:52,337 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer            - Tomcat initialized with port(s): 8080 (http)
+2023-10-03 23:46:52,338 [restartedMain] INFO  o.apache.coyote.http11.Http11NioProtocol           - Initializing ProtocolHandler ["http-nio-8080"]
+2023-10-03 23:46:52,338 [restartedMain] INFO  o.apache.catalina.core.StandardService             - Starting service [Tomcat]
+2023-10-03 23:46:52,339 [restartedMain] INFO  org.apache.catalina.core.StandardEngine            - Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-10-03 23:46:52,355 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]                 - Initializing Spring embedded WebApplicationContext
+2023-10-03 23:46:52,355 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext     - Root WebApplicationContext: initialization completed in 153 ms
+2023-10-03 23:46:52,426 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer                 - LiveReload server is running on port 35729
+2023-10-03 23:46:52,431 [restartedMain] INFO  o.apache.coyote.http11.Http11NioProtocol           - Starting ProtocolHandler ["http-nio-8080"]
+2023-10-03 23:46:52,434 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer            - Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-03 23:46:52,438 [restartedMain] INFO  com.ravi.Application                               - Started Application in 0.261 seconds (process running for 1146.791)
+2023-10-03 23:46:52,440 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener  - Condition evaluation unchanged
+2023-10-03 23:47:26,550 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 8 class path changes (0 additions, 8 deletions, 0 modifications)
+2023-10-03 23:47:26,563 [Thread-27] INFO  o.apache.coyote.http11.Http11NioProtocol           - Pausing ProtocolHandler ["http-nio-8080"]
+2023-10-03 23:47:26,563 [Thread-27] INFO  o.apache.catalina.core.StandardService             - Stopping service [Tomcat]
+2023-10-03 23:47:26,565 [Thread-27] INFO  o.apache.coyote.http11.Http11NioProtocol           - Stopping ProtocolHandler ["http-nio-8080"]
+2023-10-03 23:47:26,566 [Thread-27] INFO  o.apache.coyote.http11.Http11NioProtocol           - Destroying ProtocolHandler ["http-nio-8080"]
+2023-10-03 23:47:29,375 [restartedMain] INFO  com.ravi.Application                               - Starting Application using Java 17.0.7 with PID 11428 (F:\JRTP-PRACTICE\01-LOGGING-APP\target\classes started by Hp in F:\JRTP-PRACTICE\01-LOGGING-APP)
+2023-10-03 23:47:29,376 [restartedMain] INFO  com.ravi.Application                               - No active profile set, falling back to 1 default profile: "default"
+2023-10-03 23:47:29,534 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer            - Tomcat initialized with port(s): 8080 (http)
+2023-10-03 23:47:29,534 [restartedMain] INFO  o.apache.catalina.core.StandardService             - Starting service [Tomcat]
+2023-10-03 23:47:29,535 [restartedMain] INFO  org.apache.catalina.core.StandardEngine            - Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-10-03 23:47:29,555 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]                 - Initializing Spring embedded WebApplicationContext
+2023-10-03 23:47:29,556 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext     - Root WebApplicationContext: initialization completed in 177 ms
+2023-10-03 23:47:29,628 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer                 - LiveReload server is running on port 35729
+2023-10-03 23:47:29,639 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer            - Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-03 23:47:29,643 [restartedMain] INFO  com.ravi.Application                               - Started Application in 0.291 seconds (process running for 1183.996)
+2023-10-03 23:47:29,644 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener  - Condition evaluation unchanged
+2023-10-03 23:47:35,140 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 3 class path changes (3 additions, 0 deletions, 0 modifications)
+2023-10-03 23:47:35,155 [Thread-35] INFO  o.apache.catalina.core.StandardService             - Stopping service [Tomcat]
+2023-10-03 23:47:35,220 [restartedMain] INFO  com.ravi.Application                               - Starting Application using Java 17.0.7 with PID 11428 (F:\JRTP-PRACTICE\01-LOGGING-APP\target\classes started by Hp in F:\JRTP-PRACTICE\01-LOGGING-APP)
+2023-10-03 23:47:35,221 [restartedMain] INFO  com.ravi.Application                               - No active profile set, falling back to 1 default profile: "default"
+2023-10-03 23:47:35,381 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer            - Tomcat initialized with port(s): 8080 (http)
+2023-10-03 23:47:35,382 [restartedMain] INFO  o.apache.catalina.core.StandardService             - Starting service [Tomcat]
+2023-10-03 23:47:35,382 [restartedMain] INFO  org.apache.catalina.core.StandardEngine            - Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-10-03 23:47:35,400 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]                 - Initializing Spring embedded WebApplicationContext
+2023-10-03 23:47:35,400 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext     - Root WebApplicationContext: initialization completed in 177 ms
+2023-10-03 23:47:35,454 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer                 - LiveReload server is running on port 35729
+2023-10-03 23:47:35,463 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer            - Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-03 23:47:35,467 [restartedMain] INFO  com.ravi.Application                               - Started Application in 0.264 seconds (process running for 1189.82)
+2023-10-03 23:47:35,469 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener  - Condition evaluation unchanged
+2023-10-03 23:47:47,608 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils       - Could not detect default configuration classes for test class [com.example.demo.ApplicationTests]: ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-10-03 23:48:31,288 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 7 class path changes (3 additions, 0 deletions, 4 modifications)
+2023-10-03 23:48:31,321 [Thread-39] INFO  o.apache.catalina.core.StandardService             - Stopping service [Tomcat]
+2023-10-03 23:48:31,377 [restartedMain] INFO  com.ravi.Application                               - Starting Application using Java 17.0.7 with PID 11428 (F:\JRTP-PRACTICE\01-LOGGING-APP\target\classes started by Hp in F:\JRTP-PRACTICE\01-LOGGING-APP)
+2023-10-03 23:48:31,378 [restartedMain] INFO  com.ravi.Application                               - No active profile set, falling back to 1 default profile: "default"
+2023-10-03 23:48:31,507 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer            - Tomcat initialized with port(s): 8080 (http)
+2023-10-03 23:48:31,508 [restartedMain] INFO  o.apache.catalina.core.StandardService             - Starting service [Tomcat]
+2023-10-03 23:48:31,508 [restartedMain] INFO  org.apache.catalina.core.StandardEngine            - Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-10-03 23:48:31,521 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]                 - Initializing Spring embedded WebApplicationContext
+2023-10-03 23:48:31,521 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext     - Root WebApplicationContext: initialization completed in 142 ms
+2023-10-03 23:48:31,568 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer                 - LiveReload server is running on port 35729
+2023-10-03 23:48:31,576 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer            - Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-03 23:48:31,580 [restartedMain] INFO  com.ravi.Application                               - Started Application in 0.219 seconds (process running for 1245.932)
+2023-10-03 23:48:31,581 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener  - Condition evaluation unchanged
+2023-10-03 23:48:59,156 [RMI TCP Connection(24)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2023-10-03 23:48:59,181 [RMI TCP Connection(24)-127.0.0.1] INFO  o.apache.catalina.core.StandardService             - Stopping service [Tomcat]
+2023-10-03 23:49:28,407 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils       - Could not detect default configuration classes for test class [com.example.demo.ApplicationTests]: ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
