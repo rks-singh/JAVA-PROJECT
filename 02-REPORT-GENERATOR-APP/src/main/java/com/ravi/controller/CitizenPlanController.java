@@ -56,7 +56,7 @@ public class CitizenPlanController {
 	}
 	
 	@GetMapping("/pdf")
-	public void generatePdf(HttpServletResponse response) throws Exception, Exception {
+	public void generatePdf(HttpServletResponse response){
 		response.setContentType("application/pdf");
 		
 		String headerKey = "content-Disposition";

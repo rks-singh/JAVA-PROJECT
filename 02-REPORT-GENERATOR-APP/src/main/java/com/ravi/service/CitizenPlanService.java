@@ -14,5 +14,5 @@ public interface CitizenPlanService {
 	public List<String> getPlanStatus();
 	public List<CitizenPlan> searchCitizens(SearchCriteria criteria);
 	public void generateExcelReport(HttpServletResponse response) throws IOException;
-	public void generatePdf(HttpServletResponse response) throws Exception, IOException;
+	public void generatePdf(HttpServletResponse response);
 }

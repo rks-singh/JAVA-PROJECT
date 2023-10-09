@@ -8,6 +8,7 @@ import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
 
+import com.ravi.appconstant.AppConstant;
 import com.ravi.entity.CitizenPlan;
 import com.ravi.repository.CitizenPlanRepository;
 
@@ -23,26 +24,26 @@ public class DataLoader implements ApplicationRunner {
 		// Deleting all record before inserting all record in DB table.
 		citizenPlanRepository.deleteAll();
 
-		CitizenPlan p1 = new CitizenPlan("Jhon", "jhon@in.com", "Male", 1234l, 123445l, "Cash", "Approved",
+		CitizenPlan p1 = new CitizenPlan("Jhon", "jhon@in.com", AppConstant.MALE, 1234l, 123445l, "Cash", AppConstant.APPROVED,
 				LocalDate.now(), LocalDate.now().plusMonths(6));
 
-		CitizenPlan p2 = new CitizenPlan("Smith", "smith@in.com", "Male", 1214l, 163445l, "Cash", "Denied", null, null);
+		CitizenPlan p2 = new CitizenPlan("Smith", "smith@in.com", AppConstant.MALE, 1214l, 163445l, "Cash", AppConstant.DENIED, null, null);
 
-		CitizenPlan p3 = new CitizenPlan("Cathy", "cathy@in.com", "Female", 12346l, 523445l, "Food", "Approved",
+		CitizenPlan p3 = new CitizenPlan("Cathy", "cathy@in.com", AppConstant.FEMALE, 12346l, 523445l, "Food", AppConstant.APPROVED,
 				LocalDate.now(), LocalDate.now().plusMonths(6));
 
-		CitizenPlan p4 = new CitizenPlan("Johny", "jhon@in.com", "Male", 1284l, 123445l, "Food", "Denied", null, null);
+		CitizenPlan p4 = new CitizenPlan("Johny", "jhon@in.com", AppConstant.MALE, 1284l, 123445l, "Food", AppConstant.DENIED, null, null);
 
-		CitizenPlan p5 = new CitizenPlan("Raghu", "raghu@gmail.com", "Male", 9234l, 173445l, "Medical", "Approved",
+		CitizenPlan p5 = new CitizenPlan("Raghu", "raghu@gmail.com", AppConstant.MALE, 9234l, 173445l, "Medical", AppConstant.APPROVED,
 				LocalDate.now(), LocalDate.now().plusMonths(6));
 
-		CitizenPlan p6 = new CitizenPlan("Shital", "shital@gmail.com", "Female", 1834l, 363445l, "Employment",
+		CitizenPlan p6 = new CitizenPlan("Shital", "shital@gmail.com", AppConstant.FEMALE, 1834l, 363445l, "Employment",
 				"Approved", LocalDate.now(), LocalDate.now().plusMonths(6));
 
-		CitizenPlan p7 = new CitizenPlan("Ashok", "ashok@in.com", "Male", 12384l, 12445l, "Medical", "Denied", null,
+		CitizenPlan p7 = new CitizenPlan("Ashok", "ashok@in.com", AppConstant.MALE, 12384l, 12445l, "Medical", AppConstant.DENIED, null,
 				null);
 
-		CitizenPlan p8 = new CitizenPlan("Rohan", "rohan@in.com", "Male", 54234l, 193445l, "Employment", "Terminated",
+		CitizenPlan p8 = new CitizenPlan("Rohan", "rohan@in.com", AppConstant.MALE, 54234l, 193445l, "Employment", AppConstant.TERMINATED,
 				LocalDate.now(), LocalDate.now().plusMonths(3));
 
 		// Inserting all record in DB table.

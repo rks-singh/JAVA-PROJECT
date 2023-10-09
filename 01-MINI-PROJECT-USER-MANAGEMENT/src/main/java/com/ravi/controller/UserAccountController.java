@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import com.ravi.appconstant.AppConstant;
 import com.ravi.entity.UserAccount;
 import com.ravi.service.UserAccountService;
 
@@ -25,8 +26,8 @@ public class UserAccountController {
 	public String loadIndexForm(Model model) {
 		model.addAttribute("user", new UserAccount());
 		model.addAttribute("info", "Register Here");
-		model.addAttribute("lable", "Register");
-		return "index";
+		model.addAttribute(AppConstant.LABLE, "Register");
+		return AppConstant.INDEX;
 	}
 
 	// ========== Handling Submit button ==========
@@ -34,12 +35,12 @@ public class UserAccountController {
 	@PostMapping("/submit")
 	public String handleSubmitButton(@ModelAttribute("user") UserAccount userAccount, Model model) {
 		String status = userAccountService.saveOrUpdateUserAccount(userAccount);
-		if (status == "saved") {
+		if ("saved".equals(status)) {
 			// To handle double posting problems.
 			model.addAttribute("user", new UserAccount());
 			model.addAttribute("msg", "Form Submited Successfully. !!");
-			model.addAttribute("lable", "Register");
-			return "index";
+			model.addAttribute(AppConstant.LABLE, "Register");
+			return AppConstant.INDEX;
 		} else {
 			model.addAttribute("user", new UserAccount());
 			model.addAttribute("msg", "Form Updated Successfully. !!");

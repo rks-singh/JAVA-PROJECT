@@ -18,7 +18,7 @@ public class UserAccountServiceImplementation implements UserAccountService {
 	@Override
 	public String saveOrUpdateUserAccount(UserAccount userAccount) {
 		Integer status = userAccount.getId();
-		if (status == null) {
+		if (status==null) {
 			userAccount.setActiveSwitch("Y");
 		}
 		userRepository.save(userAccount);
