@@ -39,4 +39,10 @@ public class EmailUtils {
 		return status;
 	}
 
+	public void sendEmial(String emailId, String generatePassword) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
 }
