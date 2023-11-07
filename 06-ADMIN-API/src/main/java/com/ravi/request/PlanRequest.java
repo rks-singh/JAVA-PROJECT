@@ -1,15 +1,15 @@
-package com.ravi.model;
+package com.ravi.request;
 
 import java.time.LocalDate;
 
-public class Plan {
+public class PlanRequest {
 
 	private String planName;
 	private LocalDate planStartDate;
 	private LocalDate planEndDate;
 	private String planCategory;
 
-	public Plan() {}
+	public PlanRequest() {}
 	
 	public String getPlanName() {
 		return planName;
@@ -41,12 +41,6 @@ public class Plan {
 
 	public void setPlanCategory(String planCategory) {
 		this.planCategory = planCategory;
-	}
-	
-	@Override
-	public String toString() {
-		return "Plan [planName=" + planName + ", planStartDate=" + planStartDate + ", planEndDate=" + planEndDate
-				+ ", planCategory=" + planCategory + "]";
 	}
 	
 	

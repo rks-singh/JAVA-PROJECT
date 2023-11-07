@@ -7,8 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.ravi.entity.PlanEntity;
-import com.ravi.model.Plan;
 import com.ravi.repository.PlanRepository;
+import com.ravi.request.PlanRequest;
 
 @Service
 public class PlanServiceImpl implements PlanService {
@@ -17,16 +17,16 @@ public class PlanServiceImpl implements PlanService {
 	private PlanRepository planRepository;
 	
 	@Override
-	public String savePlan(Plan plan) {
+	public boolean savePlan(PlanRequest request) {
 		try {
 			PlanEntity planEntity = new PlanEntity();
-			BeanUtils.copyProperties(plan, planEntity);
+			BeanUtils.copyProperties(request, planEntity);
 			planEntity.setActiveSwitch("Y");
 			planRepository.save(planEntity);
 		}catch (Exception e) {
-			return "Plan Not Created";
+			return false;
 		}
-		return "Plan Created";
+		return true;
 	}
 
 	@Override

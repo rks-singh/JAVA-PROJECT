@@ -10,8 +10,6 @@ import jakarta.mail.internet.MimeMessage;
 @Component
 public class EmailUtils {
 
-
-
 	@Autowired
 	private JavaMailSender mailSender;
 

@@ -11,25 +11,29 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ravi.entity.AccountEntity;
-import com.ravi.model.Account;
+import com.ravi.request.AccountRequest;
 import com.ravi.service.AccountService;
 
 @RestController
-public class AccountController {
+public class AccountRestController {
 
 	@Autowired
 	private AccountService accountService;
 
 	@PostMapping(value = "/account", consumes = "application/json", produces = "text/plain")
-	public ResponseEntity<String> saveAccount(@RequestBody Account account) {
-		String status = accountService.saveAccount(account);
-		return new ResponseEntity<>(status, HttpStatus.CREATED);
+	public ResponseEntity<String> saveAccount(@RequestBody AccountRequest account) {
+		boolean status = accountService.saveAccount(account);
+		if (status) {
+			return new ResponseEntity<String>("Account Created", HttpStatus.OK);
+		} else {
+			return new ResponseEntity<String>("Account not Created", HttpStatus.OK);
+		}
 	}
-	
-	@GetMapping(value = "/accounts",produces = "application/json")
-	public ResponseEntity<List<AccountEntity>> getAccounts(){
+
+	@GetMapping(value = "/accounts", produces = "application/json")
+	public ResponseEntity<List<AccountEntity>> getAccounts() {
 		List<AccountEntity> accounts = accountService.getAccounts();
-		return new ResponseEntity<>(accounts,HttpStatus.OK);
+		return new ResponseEntity<>(accounts, HttpStatus.OK);
 	}
 
 }

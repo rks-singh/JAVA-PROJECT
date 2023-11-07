@@ -1,8 +1,8 @@
-package com.ravi.model;
+package com.ravi.request;
 
 import java.time.LocalDate;
 
-public class Account {
+public class AccountRequest {
 	
 	private String name;
 	private String emailId;
@@ -11,7 +11,7 @@ public class Account {
 	private LocalDate dob;
 	private Integer ssn;
 	
-	public Account() {}
+	public AccountRequest() {}
 	
 	public String getName() {
 		return name;
@@ -62,12 +62,6 @@ public class Account {
 	}
 	
 
-	@Override
-	public String toString() {
-		return "Account [name=" + name + ", emailId=" + emailId + ", mobileNumber=" + mobileNumber + ", gender="
-				+ gender + ", dob=" + dob + ", ssn=" + ssn + "]";
-	}
-	
-	
+
 
 }

@@ -8,9 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.ravi.entity.AccountEntity;
-import com.ravi.model.Account;
 import com.ravi.repository.AccountRepository;
-import com.ravi.utils.EmailDetails;
+import com.ravi.request.AccountRequest;
 import com.ravi.utils.EmailUtils;
 
 
@@ -25,25 +24,18 @@ public class AccountServiceImpl implements AccountService {
 	private EmailUtils emailUtils;
 
 	@Override
-	public String saveAccount(Account account) {
-		try {
+	public boolean saveAccount(AccountRequest request) {
+	
 			AccountEntity accountEntity = new AccountEntity();
-			BeanUtils.copyProperties(account, accountEntity);
+			BeanUtils.copyProperties(request, accountEntity);
 			accountEntity.setActiveSwitch("Y");
 			accountRepository.save(accountEntity);
-
-		} catch (Exception e) {
-			return "Account Not Created";
-		}
-
-		//Sending Email.
-		EmailDetails details = new EmailDetails();
-		details.setSubject("--- Password Details ---");
-		details.setMsgBody("Your Password : "+generatePassword());
-		details.setRecipient("rks884088@gmail.com"); // account.getEmialId().
-		emailUtils.sendEmial(details);
-		
-		return "Account Created";
+			
+			// Sending Email with Credential.
+			String subject = "IES ACCOUNT CREATED.";
+			String body = "Your Temporary Password => "+ generatePassword();
+			boolean status = emailUtils.sendEmail(request.getEmailId(), subject, body);
+			return status;
 	}
 
 	@Override
@@ -56,20 +48,20 @@ public class AccountServiceImpl implements AccountService {
 	public String generatePassword() {
 		Supplier<String> s=()-> 
 		{ 
-			String symbols="ABCDEFGHIJKLMNOPQRSTUVWXYZ#$@"; 
-			Supplier<Integer> d=()->(int)(Math.random()*10); 
-			Supplier<Character> c=()->symbols.charAt((int)(Math.random()*29)); 
+			String symbols="ABCDEFGHIJKLMNOPQRSTUVWXYZ"; 
+			Supplier<Integer> digit=()->(int)(Math.random()*10); 
+			Supplier<Character> character=()->symbols.charAt((int)(Math.random()*26)); 
 			String pwd="";
 			
 			for(int i=1;i<=8;i++) 
 			{ 
 				if(i%2==0) 
 				{ 
-					pwd=pwd+d.get(); 
+					pwd=pwd+digit.get(); 
 				} 
 				else 
 				{ 
-					pwd=pwd+c.get(); 
+					pwd=pwd+character.get(); 
 				} 
 			}
 			return pwd;	
