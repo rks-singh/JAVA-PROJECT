@@ -18,7 +18,6 @@ public class EligibilityDeterminationEntity {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer eligibilityId;
 	
-	private String planName;
 	private String planStatus;
 	private LocalDate planStartDate;
 	private LocalDate planEndDate;
@@ -96,14 +95,5 @@ public class EligibilityDeterminationEntity {
 	public void setPlanSelection(PlanSelectionEntity planSelection) {
 		this.planSelection = planSelection;
 	}
-
-	public String getPlanName() {
-		return planName;
-	}
-
-	public void setPlanName(String planName) {
-		this.planName = planName;
-	}
-	
 	
 }

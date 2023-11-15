@@ -4,20 +4,19 @@ import java.time.LocalDate;
 import java.time.Period;
 import java.util.List;
 
-import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.ravi.binding.EligibilityDeterminationInfo;
 import com.ravi.entity.CitizenRegistrationEntity;
+import com.ravi.entity.CorrespondenceEntity;
 import com.ravi.entity.EducationEntity;
-import com.ravi.entity.EligibilityDeterminationEntity;
 import com.ravi.entity.IncomeEntity;
 import com.ravi.entity.KidEntity;
 import com.ravi.entity.PlanSelectionEntity;
 import com.ravi.repository.CitizenRegistrationRepo;
+import com.ravi.repository.CorrespondenceRepo;
 import com.ravi.repository.EducationRepo;
-import com.ravi.repository.EligibilityDeterminationRepo;
 import com.ravi.repository.IncomeRepo;
 import com.ravi.repository.KidRepo;
 import com.ravi.repository.PlanSelectionRepo;
@@ -39,9 +38,9 @@ public class EligibilityDeterminationServiceImpl implements EligibilityDetermina
 
 	@Autowired
 	private KidRepo kidRepo;
-
+	
 	@Autowired
-	private EligibilityDeterminationRepo eligibilityRepo;
+	private CorrespondenceRepo correspondenceRepo;
 
 	@Override
 	public EligibilityDeterminationInfo determinEligibility(Integer caseNumber) {
@@ -102,9 +101,11 @@ public class EligibilityDeterminationServiceImpl implements EligibilityDetermina
 				info.setPlanStartDate(null);
 				info.setPlanEndDate(null);
 				if (incomeEntity.getMonthlySalaryIncome() > 300) {
-					info.setDenialReason("MONTHLY SALARY CONDITION FAILED!");
-				} else {
+					info.setDenialReason("HIGH INCOME!");
+				} else if(isValidAge==false) {
 					info.setDenialReason("AGE CONDITION FAILED!");
+				}else {
+					info.setDenialReason("N0 CHILD!");
 				}
 			}
 		} else if ("Medicaid".equalsIgnoreCase(planEntity.getPlanName())) {
@@ -132,7 +133,7 @@ public class EligibilityDeterminationServiceImpl implements EligibilityDetermina
 				if (incomeEntity.getMonthlySalaryIncome() > 300) {
 					info.setDenialReason("HIGH INCOME!");
 				} else {
-					info.setDenialReason("INCOME CONDITION FAILED!");
+					info.setDenialReason("PROPERTY INCOME AND RENT INCOME IS HIGH!");
 				}
 			}
 		} else if ("Medicare".equalsIgnoreCase(planEntity.getPlanName())) {
@@ -175,11 +176,25 @@ public class EligibilityDeterminationServiceImpl implements EligibilityDetermina
 				info.setBenefitAmount(null);
 				info.setPlanStartDate(null);
 				info.setPlanEndDate(null);
-				info.setDenialReason("EDUCATION CONDITION FAILED!");
+				if(educationEntity.getGraduationYear() != null) {
+					info.setDenialReason("NOT GRADUATED!");
+				}else {
+					info.setDenialReason("UN-EMPLOYED!");
+				}
 
 			}
 		}
+		
+		generateCorrespondence(citizenEntity);
 		return info;
+	}
+
+	private void generateCorrespondence(CitizenRegistrationEntity entity) {
+		CorrespondenceEntity correspondenceEntity = new CorrespondenceEntity();
+		correspondenceEntity.setNoticeStatus("Pending");
+		correspondenceEntity.setCitizenRegistration(entity);
+		
+		correspondenceRepo.save(correspondenceEntity);
 	}
 
 }
