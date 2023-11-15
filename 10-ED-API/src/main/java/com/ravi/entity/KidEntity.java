@@ -1,5 +1,7 @@
 package com.ravi.entity;
 
+import java.time.LocalDate;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -17,7 +19,7 @@ public class KidEntity {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer kidId;
 	private String kidName;
-	private Integer kidAge;
+	private LocalDate kidDob;
 	private Long kidSsn;
 	
 	@ManyToOne
@@ -41,12 +43,7 @@ public class KidEntity {
 	public void setKidName(String kidName) {
 		this.kidName = kidName;
 	}
-	public Integer getKidAge() {
-		return kidAge;
-	}
-	public void setKidAge(Integer kidAge) {
-		this.kidAge = kidAge;
-	}
+	
 	public Long getKidSsn() {
 		return kidSsn;
 	}
@@ -64,6 +61,12 @@ public class KidEntity {
 	}
 	public void setCitizenRegistration(CitizenRegistrationEntity citizenRegistration) {
 		this.citizenRegistration = citizenRegistration;
+	}
+	public LocalDate getKidDob() {
+		return kidDob;
+	}
+	public void setKidDob(LocalDate kidDob) {
+		this.kidDob = kidDob;
 	}
 	
 }

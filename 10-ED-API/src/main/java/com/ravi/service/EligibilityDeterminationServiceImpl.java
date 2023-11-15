@@ -1,6 +1,7 @@
 package com.ravi.service;
 
 import java.time.LocalDate;
+import java.time.Period;
 import java.util.List;
 
 import org.springframework.beans.BeanUtils;
@@ -45,17 +46,15 @@ public class EligibilityDeterminationServiceImpl implements EligibilityDetermina
 	@Override
 	public EligibilityDeterminationInfo determinEligibility(Integer caseNumber) {
 
-		EligibilityDeterminationEntity entity = new EligibilityDeterminationEntity();
-
 		CitizenRegistrationEntity citizenEntity = citizenRepo.findById(caseNumber).get();
 		IncomeEntity incomeEntity = incomeRepo.findByCaseNumber(caseNumber);
 		EducationEntity educationEntity = educationRepo.findByCaseNumber(caseNumber);
 		PlanSelectionEntity planEntity = planRepo.findById(citizenEntity.getPlanId()).get();
 		List<KidEntity> kidsEntity = kidRepo.findByCaseNumber(caseNumber);
 
-		if ("SNAP".equalsIgnoreCase(planEntity.getPlanName())) {
+		EligibilityDeterminationInfo info = new EligibilityDeterminationInfo();
 
-			EligibilityDeterminationInfo info = new EligibilityDeterminationInfo();
+		if ("SNAP".equalsIgnoreCase(planEntity.getPlanName())) {
 
 			if (incomeEntity.getMonthlySalaryIncome() <= 300) {
 				info.setCaseNumber(caseNumber);
@@ -66,9 +65,6 @@ public class EligibilityDeterminationServiceImpl implements EligibilityDetermina
 				info.setPlanEndDate(LocalDate.now().plusMonths(3));
 				info.setDenialReason("NA");
 
-				BeanUtils.copyProperties(info, entity);
-				eligibilityRepo.save(entity);
-
 			} else {
 				info.setCaseNumber(caseNumber);
 				info.setPlanName("SNAP");
@@ -76,26 +72,20 @@ public class EligibilityDeterminationServiceImpl implements EligibilityDetermina
 				info.setBenefitAmount(null);
 				info.setPlanStartDate(null);
 				info.setPlanEndDate(null);
-				info.setDenialReason("MONTHLY SALARY CONDITION FAILED!");
-
-				BeanUtils.copyProperties(info, entity);
-				eligibilityRepo.save(entity);
+				info.setDenialReason("HIGH INCOME!");
 			}
 		} else if ("CCAP".equalsIgnoreCase(planEntity.getPlanName())) {
 
-			EligibilityDeterminationInfo info = new EligibilityDeterminationInfo();
-
-			int kidsCount = 0;
 			boolean isValidAge = true;
 
 			for (KidEntity kid : kidsEntity) {
-				kidsCount++;
-				if (kid.getKidAge() > 16) {
+				int kidAge = Period.between(kid.getKidDob(), LocalDate.now()).getYears();
+				if (kidAge > 16) {
 					isValidAge = false;
 					break;
 				}
 			}
-			if ((incomeEntity.getMonthlySalaryIncome() <= 300) && (kidsCount > 0) && (isValidAge == true)) {
+			if ((incomeEntity.getMonthlySalaryIncome() <= 300) && (!kidsEntity.isEmpty()) && (isValidAge == true)) {
 				info.setCaseNumber(caseNumber);
 				info.setPlanName("CCAP");
 				info.setPlanStatus("Approved");
@@ -104,8 +94,6 @@ public class EligibilityDeterminationServiceImpl implements EligibilityDetermina
 				info.setPlanEndDate(LocalDate.now().plusMonths(3));
 				info.setDenialReason("NA");
 
-				BeanUtils.copyProperties(info, entity);
-				eligibilityRepo.save(entity);
 			} else {
 				info.setCaseNumber(caseNumber);
 				info.setPlanName("CCAP");
@@ -118,20 +106,15 @@ public class EligibilityDeterminationServiceImpl implements EligibilityDetermina
 				} else {
 					info.setDenialReason("AGE CONDITION FAILED!");
 				}
-
-				BeanUtils.copyProperties(info, entity);
-				eligibilityRepo.save(entity);
 			}
 		} else if ("Medicaid".equalsIgnoreCase(planEntity.getPlanName())) {
-
-			EligibilityDeterminationInfo info = new EligibilityDeterminationInfo();
 
 			Double propertyIncome = incomeEntity.getPropertyIncome();
 			Double rentIncome = incomeEntity.getRentIncome();
 
 			Double totalIncome = propertyIncome + rentIncome;
 
-			if ((incomeEntity.getMonthlySalaryIncome() <= 300) && (totalIncome == 0)) {
+			if ((incomeEntity.getMonthlySalaryIncome() <= 300) && (totalIncome <= 0)) {
 				info.setCaseNumber(caseNumber);
 				info.setPlanName("Medicaid");
 				info.setPlanStatus("Approved");
@@ -139,10 +122,7 @@ public class EligibilityDeterminationServiceImpl implements EligibilityDetermina
 				info.setPlanStartDate(LocalDate.now());
 				info.setPlanEndDate(LocalDate.now().plusMonths(3));
 				info.setDenialReason("NA");
-
-				BeanUtils.copyProperties(info, entity);
-				eligibilityRepo.save(entity);
-			}else {
+			} else {
 				info.setCaseNumber(caseNumber);
 				info.setPlanName("Medicaid");
 				info.setPlanStatus("Denied");
@@ -150,23 +130,16 @@ public class EligibilityDeterminationServiceImpl implements EligibilityDetermina
 				info.setPlanStartDate(null);
 				info.setPlanEndDate(null);
 				if (incomeEntity.getMonthlySalaryIncome() > 300) {
-					info.setDenialReason("MONTHLY SALARY CONDITION FAILED!");
+					info.setDenialReason("HIGH INCOME!");
 				} else {
 					info.setDenialReason("INCOME CONDITION FAILED!");
 				}
-
-				BeanUtils.copyProperties(info, entity);
-				eligibilityRepo.save(entity);
 			}
-		}else if("Medicare".equalsIgnoreCase(planEntity.getPlanName())) {
-			
-			EligibilityDeterminationInfo info = new EligibilityDeterminationInfo();
-			
-			int birthYear = citizenEntity.getCitizeDob().getYear();
-			int currentYear = LocalDate.now().getYear();
-			int citizenAge = currentYear - birthYear;
-			
-			if(citizenAge>=65) {
+		} else if ("Medicare".equalsIgnoreCase(planEntity.getPlanName())) {
+
+			int citizenAge = Period.between(citizenEntity.getCitizeDob(), LocalDate.now()).getYears();
+
+			if (citizenAge >= 65) {
 				info.setCaseNumber(caseNumber);
 				info.setPlanName("Medicare");
 				info.setPlanStatus("Approved");
@@ -175,9 +148,7 @@ public class EligibilityDeterminationServiceImpl implements EligibilityDetermina
 				info.setPlanEndDate(LocalDate.now().plusMonths(3));
 				info.setDenialReason("NA");
 
-				BeanUtils.copyProperties(info, entity);
-				eligibilityRepo.save(entity);
-			}else {
+			} else {
 				info.setCaseNumber(caseNumber);
 				info.setPlanName("Medicare");
 				info.setPlanStatus("Denied");
@@ -185,17 +156,11 @@ public class EligibilityDeterminationServiceImpl implements EligibilityDetermina
 				info.setPlanStartDate(null);
 				info.setPlanEndDate(null);
 				info.setDenialReason("AGE CONDITION FAILED!");
-
-				BeanUtils.copyProperties(info, entity);
-				eligibilityRepo.save(entity);
 			}
-		}else if("RIW".equalsIgnoreCase(planEntity.getPlanName())) {
-			
-			EligibilityDeterminationInfo info = new EligibilityDeterminationInfo();
-			
-			if(("un-employed".equalsIgnoreCase(educationEntity.getHighestDegree()))&&
-					("graduated".equalsIgnoreCase(educationEntity.getHighestDegree()))) {
-				
+		} else if ("RIW".equalsIgnoreCase(planEntity.getPlanName())) {
+
+			if ((educationEntity.getGraduationYear() != null) && (incomeEntity != null)) {
+
 				info.setCaseNumber(caseNumber);
 				info.setPlanName("RIW");
 				info.setPlanStatus("Approved");
@@ -203,10 +168,7 @@ public class EligibilityDeterminationServiceImpl implements EligibilityDetermina
 				info.setPlanStartDate(LocalDate.now());
 				info.setPlanEndDate(LocalDate.now().plusMonths(3));
 				info.setDenialReason("NA");
-
-				BeanUtils.copyProperties(info, entity);
-				eligibilityRepo.save(entity);
-			}else {
+			} else {
 				info.setCaseNumber(caseNumber);
 				info.setPlanName("RIW");
 				info.setPlanStatus("Denied");
@@ -215,16 +177,8 @@ public class EligibilityDeterminationServiceImpl implements EligibilityDetermina
 				info.setPlanEndDate(null);
 				info.setDenialReason("EDUCATION CONDITION FAILED!");
 
-				BeanUtils.copyProperties(info, entity);
-				eligibilityRepo.save(entity);
 			}
 		}
-		
-		EligibilityDeterminationEntity eligiblityInfo = eligibilityRepo.findByCaseNumber(caseNumber);
-		EligibilityDeterminationInfo info = new EligibilityDeterminationInfo();
-		
-		BeanUtils.copyProperties(eligiblityInfo, info);
-		info.setCaseNumber(caseNumber);
 		return info;
 	}
 
