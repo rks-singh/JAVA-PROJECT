@@ -1,4 +1,4 @@
-package com.ravi.util;
+package com.ravi.utils;
 
 import java.io.File;
 
@@ -14,11 +14,9 @@ public class EmailUtils {
 
 	@Autowired
 	private JavaMailSender mailSender;
-
-	public boolean sendEmial(File file) {
-
+	
+	public boolean sendEmial(String to, String subject, String body, File file) {
 		boolean status = false;
-
 		try {
 			// used to send email with attachment and formated text.
 			MimeMessage message = mailSender.createMimeMessage();
@@ -26,9 +24,9 @@ public class EmailUtils {
 			// used to set details for message object.
 			MimeMessageHelper helper = new MimeMessageHelper(message,true);
 
-			helper.setTo("rks884088@gmail.com");
-			helper.setSubject("-- Your Report --");
-			helper.setText("<h2> Please Download your Report </h2>", true);
+			helper.setTo(to);
+			helper.setSubject(subject);
+			helper.setText(body, true);
 			helper.addAttachment(file.getName(), file);
 			mailSender.send(message);
 			status = true;
