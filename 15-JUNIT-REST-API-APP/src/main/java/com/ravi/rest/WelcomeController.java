@@ -18,7 +18,7 @@ public class WelcomeController {
 	public ResponseEntity<String> getWelcomeMessage(){
 		String name = welcomeService.getClass().getName();
 		System.out.println(name);
-		String message = welcomeService.getMessage();
+		String message = welcomeService.getWelcomeMessage();
 		return new ResponseEntity<>(message,HttpStatus.OK);
 	}
 	

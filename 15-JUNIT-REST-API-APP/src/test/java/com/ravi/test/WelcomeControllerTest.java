@@ -28,7 +28,7 @@ public class WelcomeControllerTest {
 	public void testGetWelcomeMessage() throws Exception {
 		
 		// Defining behavior for mock object.
-		when(welcomeService.getMessage()).thenReturn("WELCOME, GOOD MORNING!!");
+		when(welcomeService.getWelcomeMessage()).thenReturn("WELCOME, GOOD MORNING!!");
 		
 		// Prepare HTTP Request.
 		MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders.get("/message");
